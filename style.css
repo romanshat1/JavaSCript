@@ -1,0 +1,77 @@
+html,body{
+	font-family: 'Open Sans', 'M PLUS Rounded 1c', sans-serif;
+  height: 100%;
+background: url(back.jpg) ;
+
+}
+#navbar{
+  background-color: #eee;
+  margin-right: 5%;
+}
+#navbar > *{
+  text-decoration: underline;
+  text-decoration-line: 
+}
+ul >li{
+	list-style: none;
+  line-height: 4em;
+  padding: 2px;
+}
+
+a:visited,a:link{
+	text-decoration: none;
+	color: black;
+}
+
+.header-title{
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.subtitle{
+	margin-top: 1.5em;
+	margin-botton: 1.5em;
+  text-decoration: capitalize;
+	font-weight: bold;
+	font-size: 15px;
+}
+pre code{
+  font-family: 'Source Code Pro',monospace !important;
+	display: block;
+	background-color : #eee;
+	margin: 1%;
+}
+code{
+  background-color: #ddd;
+}
+#main-container{
+  display: grid;
+  grid-template-columns: 5fr 15fr;
+  grid-template-rows: auto;
+}
+
+#top{
+  bottom: 0px;
+  right: 2em;
+  position: fixed;
+  background: transparent;
+}
+#top>a{
+  text-decoration: underline solid blueviolet;
+  font-size: 1.5em;
+}
+
+#resources>a{
+  text-decoration: underline solid black;
+}
+
+@media screen and (max-width: 900px){
+  #main-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5fr auto;
+  }
+  #main-doc-container,#navbar-container{
+    margin: 4%;
+  }
+}

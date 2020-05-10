@@ -1,0 +1,380 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Учебник JavaScript</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+    <div id="main-container">
+      <div id="navbar-container">
+		<nav id="navbar">
+      <header class="header-title">Язык программирования JavaScript</header>
+			<ul id="list-of-sections">
+				<li><a class="nav-link" href="#Introduction">Введение в JavaScript</a></li>
+				<li><a class="nav-link" href="#Why_JS">Что делает JavaScript особенным?</a></li>
+				<li><a class="nav-link" href="#Hello_World">Привет, мир!</a></li>
+				<li><a class="nav-link" href="#Variables">Переменные</a></li>
+				<li><a class="nav-link" href="#Data_Types">Типы данных</a></li>
+				<li><a class="nav-link" href="#if...else_statements">Условные операторы: if, '?'</a></li>
+				<li><a class="nav-link" href="#for_Loop">Циклы </a></li>
+				<li><a class="nav-link" href="#Functions">Функции</a></li>
+				<li><a class="nav-link" href="#References">Источники</a></li>
+			</ul>
+		</nav>
+  </div>
+  <div id="main-doc-container">
+		<main id="main-doc">
+			<!-- INTRODUCTION SECTION-->
+			<section class="main-section" id="Introduction">
+				<header class="header-title">Введение в JavaScript</header>
+				<p class="passages">
+					Здесь вы можете изучить JavaScript, начиная с нуля и заканчивая продвинутыми концепциями вроде ООП. Мы будем использовать браузер в качестве окружения, но основное внимание будет уделяться именно самому языку JavaScript
+				</p>
+				<p class="passages">
+				<hr>
+					Изначально JavaScript был создан, чтобы «сделать веб-страницы живыми».
+
+Программы на этом языке называются скриптами. Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.
+Скрипты распространяются и выполняются, как простой текст. Им не нужна специальная подготовка или компиляция для запуска.
+Это отличает JavaScript от другого языка – Java.
+				</p>
+				<p class="passages">
+					<hr>
+					Современный JavaScript – это «безопасный» язык программирования. Он не предоставляет низкоуровневый доступ к памяти или процессору, потому что изначально был создан для браузеров, не требующих этого.
+Возможности JavaScript сильно зависят от окружения, в котором он работает. Например, Node.JS поддерживает функции чтения/записи произвольных файлов, выполнения сетевых запросов и т.д.
+В браузере для JavaScript доступно всё, что связано с манипулированием веб-страницами, взаимодействием с пользователем и веб-сервером.
+				</p>
+			</section>
+			<!--THE END OF INTRODUCTION SECTION -->
+
+			<!-- WHY PYTHON SECTION-->
+			<section class="main-section" id="Why_JS">
+				<header class="header-title">Что делает JavaScript особенным?</header>
+				<p class="passages">
+					<ol>
+						<li>Простые вещи делаются просто.</li>
+						<li>Полная интеграция с HTML/CSS..</li>
+						<li>Поддерживается всеми основными браузерами и включён по умолчанию.</li>
+						<li>JavaScript – это единственная браузерная технология, сочетающая в себе все эти три вещи.</li>
+						<li>Вот что делает JavaScript особенным. Вот почему это самый распространённый инструмент для создания интерфейсов в браузере.</li>
+						<li>Хотя, конечно, JavaScript позволяет делать приложения не только в браузерах, но и на сервере, на мобильных устройствах и т.п.</li>
+				</ol>
+				</p>
+			</section>
+		<!-- END OF WHY PYTHON SECTION -->
+
+		<!--HELLO WORLD-->
+		<section class="main-section" id="Hello_World">
+			<header class="header-title" >Привет, мир!</header>
+			<p class="passages">
+        <!--CODE PART GOES HERE-->
+				<pre><code>
+	 script>
+    alert( 'Привет, мир!' );
+  	/script>				
+</code></pre>
+			</p>
+		</section>
+		<!--END OF HELLO WORLD SECTION-->
+
+	<!--VARIABLE SECTION -->
+		<section class="main-section" id="Variables">
+			<header  class="header-title">Переменные</header>
+			<p class="passages">
+				Переменная – это «именованное хранилище» для данных. Мы можем использовать переменные для хранения товаров, посетителей и других данных.
+
+Для создания переменной в JavaScript используйте ключевое слово let.<br>
+				<span class="subtitle">Пример:</span><br>
+        <!--CODE PART GOES HERE-->
+				<pre><code>
+  x = 5
+  y = "John"
+  alert(x)
+  alert(y)
+				</code></pre><br>
+				Мы легко поймём концепцию «переменной», если представим её в виде «коробки» для данных с уникальным названием на ней.
+
+Например, переменную message можно представить как коробку с названием "message" и значением "Hello!" внутри<br>
+        <!--CODE PART GOES HERE-->
+				<pre><code>
+  let message;
+
+	message = 'Hello!';
+
+	message = 'World!'; // значение изменено
+
+	alert(message);
+				</code></pre>
+			</p>
+			<p class="passages">
+				Мы можем объявить переменные для хранения данных с помощью ключевых слов var, let или const.
+ Обычно мы вообще не используем его, но мы рассмотрим тонкие отличия от let в главе Устаревшее ключевое слово "var" на случай, если это всё-таки вам понадобится.
+				<ol>
+					<li>let – это современный способ объявления.</li>
+					<li>var – это устаревший способ объявления.</li>
+					<li>const – похоже на let, но значение переменной не может изменяться.</li>
+					<li>Переменные должны быть названы таким образом, чтобы мы могли легко понять, что у них внутри.</li>
+			</ol>
+					</p>
+		</section>
+	<!-- END OF VARIABLES SECTION -->
+
+		<!-- DATA TYPES SECTION-->
+	<section class="main-section" id="Data_Types" >
+		<header class="header-title">Типы данных</header>
+		<p class="passages">Языки программирования, в которых такое возможно, называются «динамически типизированными». Это значит, что типы данных есть, но переменные не привязаны ни к одному из них.
+Есть восемь основных типов данных в JavaScript. В этой главе мы рассмотрим их в общем, а в следующих главах поговорим подробнее о каждом.<br><br>Переменная в JavaScript может содержать любые данные. В один момент там может быть строка, а в другой – число:
+		</p>
+		<p class="passages">
+			<span class="subtitle">Число</span><br>
+			Числовой тип данных (number) представляет как целочисленные значения, так и числа с плавающей точкой.
+
+Существует множество операций для чисел, например, умножение <code>*</code>, деление <code>/</code>, сложение <code>+</code>, вычитание - и так далее.
+
+Кроме обычных чисел, существуют так называемые «специальные числовые значения», которые относятся к этому типу данных: <code>Infinity</code>,<code> -Infinity</code> и <code>NaN</code>.
+
+<code>Infinite</code> представляет собой математическую бесконечность ∞. Это особое значение, которое больше любого числа.
+		</p>
+		<p class="passages">
+      <!--CODE PART GOES HERE-->
+			<pre><code>
+	let n = 123;
+	n = 12.345;
+
+			</code></pre>
+		</p>
+		<p class="passages">
+			<span class="subtitle">Строка</span><br>
+			Строка (string) в JavaScript должна быть заключена в кавычки.<br>
+	<pre><code>(string)</pre></code><br>
+			Двойные или одинарные кавычки являются «простыми», между ними нет разницы в JavaScript.<br>
+      <!--CODE PART GOES HERE-->
+
+			<pre><code>
+	let str = "Привет";
+	let str2 = 'Одинарные кавычки тоже подойдут';
+	let phrase = `Обратные кавычки позволяют встраивать переменные ${str}`;
+			</code></pre>
+			В некоторых языках, например C и Java, для хранения одного символа, например "a" или "%", существует отдельный тип. В языках C и Java это char.
+
+<br>
+      <!--CODE PART GOES HERE-->
+			<pre><code>
+	let name = "Иван";
+
+	// Вставим переменную
+	alert( `Привет, ${name}!` ); // Привет, Иван!
+
+	// Вставим выражение
+	alert( `результат: ${1 + 2}` ); // результат: 3
+			</code></pre>
+		</p>
+		<p class="passages">
+			<span class="subtitle">Булевый (логический) тип
+</span><br>
+			Булевый тип <code>(boolean)</code> может принимать только два значения: <code>true</code> (истина) и <code>false</code> (ложь).
+
+Такой тип, как правило, используется для хранения значений да/нет: true значит «да, правильно», а false значит «нет, не правильно».<br>
+      <!--CODE PART GOES HERE-->
+			<pre><code>
+	let nameFieldChecked = true; // да, поле отмечено
+	let ageFieldChecked = false; // нет, поле не отмечено
+
+			</code></pre>
+			Булевые значения также могут быть результатом сравнений.<br>
+
+      <!--CODE PART GOES HERE-->
+			<pre><code>
+	 let isGreater = 4 > 1;
+
+	alert( isGreater ); // true (результатом сравнения будет "да")
+			</code></pre>
+
+			</code></pre>
+				<p class="passages">
+					<span class="subtitle">Итого</span><br>
+					В JavaScript есть 8 основных типов.
+
+	<code>number</code> для любых чисел: целочисленных или чисел с плавающей точкой, целочисленные значения ограничены диапазоном ±253.
+	<code>bigint</code> для целых чисел произвольной длины.
+	<code>string</code> для строк. Строка может содержать один или больше символов, нет отдельного символьного типа.
+	<code>boolean</code> для true/false.
+	<code>null</code> для неизвестных значений – отдельный тип, имеющий одно значение null.
+	<code>undefined</code> для неприсвоенных значений – отдельный тип, имеющий одно значение undefined.
+	<code>object</code> для более сложных структур данных.
+	<code>symbol</code> для уникальных идентификаторов.
+	Оператор <code>typeof</code> позволяет нам увидеть, какой тип данных сохранён в переменной.
+
+	Имеет две формы: typeof x или typeof(x).
+	Возвращает строку с именем типа. Например, "string".
+	Для null возвращается "object" – это ошибка в языке, на самом деле это не объект.
+<br>
+
+
+
+			
+				</p>
+		</p>
+	</section>
+				<!-- END OF DATA TYPES SECTION -->
+
+				<!--IF ELSE SECTION-->
+				<section class="main-section" id="if...else_statements">
+					<header  class="header-title">Условные операторы: if, '?'</header>
+					<p class="passages">
+						<!-- if statement -->
+						Иногда нам нужно выполнить различные действия в зависимости от условий.
+					Для этого мы можем использовать оператор if и условный оператор ?, который также называют «оператор вопросительный знак».<br>
+            Оператор if(...) вычисляет условие в скобках и, если результат true, то выполняет блок кода..<br>
+						<span class="subtitle">if (...)</span><br>
+
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+		 let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
+
+		 (year == 2015) alert( 'Вы правы!' );
+						</code></pre><br>
+						<span class="subtitle">Example</span><br>
+
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+	if (year == 2015) {
+  	alert( "Правильно!" );
+	alert( "Вы такой умный!" );
+		}
+						</code></pre><br>
+					</p>
+					<p class="passages">
+						<!-- if-else statements -->
+						<span class="subtitle">Блок «else»</span><br>
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+	let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
+
+	if (year == 2015) {
+  	alert( 'Да вы знаток!' );
+	} else {
+	  alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+	}
+						</code></pre>
+						<br>
+						Оператор if может содержать необязательный блок «else» («иначе»). Выполняется, когда условие ложно.
+						В приведённом выше коде, JavaScript сначала проверит year < 2015. Если это неверно, он переходит к следующему условию year > 2015. Если оно тоже ложно, тогда сработает последний alert.
+
+Блоков else if может быть и больше. Присутствие блока else не является обязательным
+						.<br>
+						<span class="subtitle">Пример</span><br>
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+	let accessAllowed;
+	let age = prompt('Сколько вам лет?', '');
+
+	if (age > 18) {
+  accessAllowed = true;
+	} else {
+  accessAllowed = false;
+	}
+
+	alert(accessAllowed);
+						</code></pre>
+					</p>
+				</section>
+          <!-- END OF IF ELSE STATEMENT-->
+
+				<section class="main-section" id="for_Loop">
+					<header class="header-title" >Циклы while и for</header><br>
+					<p class="passages">
+						При написании скриптов зачастую встаёт задача сделать однотипное действие много раз.
+
+Например, вывести товары из списка один за другим. Или просто перебрать все числа от 1 до 10 и для каждого выполнить одинаковый код.
+
+Для многократного повторения одного участка кода предусмотрены циклы.<br>
+						<span class="subtitle">Синтаксис</span><br>
+						<pre><code>
+		while (condition) {
+  	// код
+  	// также называемый "телом цикла"
+		}
+						</code></pre><br>
+						Одно выполнение тела цикла по-научному называется итерация. Цикл в примере выше совершает три итерации.
+
+Если бы строка i++ отсутствовала в примере выше, то цикл бы повторялся (в теории) вечно. На практике, конечно, браузер не позволит такому случиться, он предоставит пользователю возможность остановить «подвисший» скрипт, а JavaScript на стороне сервера придётся «убить» процесс.
+
+Любое выражение или переменная может быть условием цикла, а не только сравнение: условие while вычисляется и преобразуется в логическое значение.
+
+Например,<code> while (i)</code> – более краткий вариант<code> while (i != 0)</code>:</p><br>
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+	let i = 3;
+	while (i) { // когда i будет равно 0, условие станет ложным, и цикл остановится
+  	alert( i );
+  	i--;
+	}
+						</code></pre>
+					</p>
+
+				<!-- END OF FOR LOOP SECTION-->
+				</section>
+
+			<!--FUNCTIONS SECTION-->
+				<section class="main-section" id="Functions">
+					<header class="header-title" >Функции</header><br>
+					<p class="passages">
+						Зачастую нам надо повторять одно и то же действие во многих частях программы.
+
+Например, необходимо красиво вывести сообщение при приветствии посетителя, при выходе посетителя с сайта, ещё где-нибудь.
+
+Чтобы не повторять один и тот же код во многих местах, придуманы функции. Функции являются основными «строительными блоками» программы.
+
+Примеры встроенных функций вы уже видели – это <code>alert(message)</code>,<code> prompt(message, default)</code> и <code>confirm(question)</code>. Но можно создавать и свои. <br>
+						<span class="subtitle">Объявление функции</span><br>
+            <!--CODE PART GOES HERE-->
+
+						<pre><code>
+		function showMessage() {
+  		alert( 'Всем привет!' );
+		}
+						</code></pre><br>
+					<span class="subtitle">Примери</span><br>
+          <!--CODE PART GOES HERE-->
+
+					<pre><code>
+	function showMessage() {
+  	alert( 'Всем привет!' );
+	}
+
+	showMessage();
+	showMessage();
+					</code></pre><br>
+					</p>
+				</section>
+			<!-- END OF FUNCTION SECTION-->
+
+			<section class="main-section" id="References">
+				<header class="header-title" >Источники</header><br>
+				<p class="passages" id="resources">
+					<a href="https://www.javascript.com/" target="_blank" title="JavaScript Offical Website">JavaScript Offical Website</a><br>
+          <a href="https://learn.javascript.ru/" title="JS documentation">JS Documentation</a><br>
+          <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="JS imfo" target="_blank">JS (info)</a><br>
+          <a href="https://javascript.info/" tabindex="_blank" title="JS Books">JS Books</a><br>
+          <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" title="JS videos" target="_blank">JS FreeCodeCamp</a><br>
+				</p>
+	</section>
+		</main>
+    </div>
+  </div>
+  <div id="top"><a href="#navbar">ВВЕРХ&nbsp;&uarr;</a></div>
+	</body>
+</html>
